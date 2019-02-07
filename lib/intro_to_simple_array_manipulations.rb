@@ -15,11 +15,11 @@ def pop_with_args (array)
 end
 
 def using_shift (array)
-  array.pop
+  array.shift
 end
 
 def shift_with_args (array)
-  array.pop(2)
+  array.shift(2)
 end
 
 def using_concat (array_1, array_2)
@@ -27,7 +27,7 @@ def using_concat (array_1, array_2)
 end
 
 def using_insert (array, new_element)
-  array.insert(3, new_element)
+  array.insert(4, new_element)
 end
 
 def using_uniq (array)
