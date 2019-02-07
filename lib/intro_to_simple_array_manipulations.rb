@@ -2,63 +2,27 @@ def using_push (array, string)
   array.push(string)
 end
 
-describe "#using_unshift" do 
-  before(:each) do 
-    neighborhoods_in_northwest_brooklyn = ["Brooklyn Yards", "Cadman Plaza", "Clinton Hill", "Downtown Brooklyn", "DUMBO"]
-    @new_neighborhood = "Brooklyn Heights"
-    @updated_array = using_unshift(neighborhoods_in_northwest_brooklyn, @new_neighborhood)
-  end
-  
-  it "takes in two arguments, an array and a string and adds that string to the front of the array using the unshift method" do
-    expect(@updated_array.first).to eq(@new_neighborhood)
-  end
-
-  it "increases the length of the array" do 
-    expect(@updated_array.size).to eq(6)
-  end
+def using_unshift (array, string)
+  array.unshift(string)
 end
 
-describe "#using_pop" do
-  before(:each) do 
-    @great_hits_of_the_nineties = ["Baby One More Time", "Smells Like Teen Spirit", "Missing", "Walking On The Sun", "Hard Knock Life", "Losing My Religion"]
-    @deleted_string = using_pop(@great_hits_of_the_nineties)
-  end
-  it "takes in argument of an array and uses the pop method to remove the last element from the array and return that element" do 
-    expect(@deleted_string).to eq("Losing My Religion")
-  end
-
-  it "decreases the length of the array by 1" do 
-    expect(@great_hits_of_the_nineties.size).to eq(5)
-  end
+def using_pop (array)
+  array.pop
 end
 
-describe "#pop_with_args" do
-  before(:each) do 
-    @chars_in_game_of_thrones = ["Danny T.", "Tyrion Lannister", "Stable Boy", "Sandor Clegane"]
-    @chars_arya_killed = pop_with_args(@chars_in_game_of_thrones)
-  end 
-  it "takes in an argument of an array and uses the pop method with an argument of 2 to remove the last two array items and return them" do 
-    expect(@chars_arya_killed).to eq(["Stable Boy", "Sandor Clegane"])
-  end 
-
-  it "decreases the length of the array by 2" do
-    expect(@chars_in_game_of_thrones.size).to eq(2) 
-  end
+def pop_with_args (array)
+  array.pop(2)
 end
 
-describe "#using_shift" do 
-  before(:each) do 
-    @my_favorite_cities = ["Lagos", "Cape Town", "Nairobi", "San Francisco", "Gaborone", "New York", "Berlin", "London"]
-    @im_so_over_this_city = using_shift(@my_favorite_cities)
-  end
-  it "takes in an argument of an array and uses the shift method to remove the first item and return it" do 
-    expect(@im_so_over_this_city).to eq("Lagos")
-  end
-
-  it "decreases the length of the array by 1" do 
-    expect(@my_favorite_cities.size).to eq(7)
-  end
+def using_shift (array)
+  array.pop
 end
+
+def shift_with_args (array)
+  array.pop(2)
+end
+
+
 
 describe "#shift_with_args" do 
   before(:each) do 
